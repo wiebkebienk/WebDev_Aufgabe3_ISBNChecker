@@ -58,7 +58,22 @@ const {caluclateISBNChecksum} = require('./script');
         {input: '9000000000', output: '9'},
         ]
         .forEach(({input, output}) => {
-          it('should calculate right', () => {
+          it('should calculate 1. right', () => {
+            expect(caluclateISBNChecksum(input)).toBe(output)
+        })
+        })
+})
+
+//Um zu testen, ob X richtig gerechnet wird
+    describe('caluclateISBNChecksum', () => {
+        [
+        {input: '887983634X', output: '10'},
+        {input: '377281901X', output: '10'},
+        {input: '396645016X', output: '10'},
+        {input: '396645016X', output: '10'},
+        ]
+        .forEach(({input, output}) => {
+          it('should calculate 10 right', () => {
             expect(caluclateISBNChecksum(input)).toBe(output)
         })
         })
