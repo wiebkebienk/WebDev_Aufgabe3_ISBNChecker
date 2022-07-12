@@ -5,6 +5,7 @@ var __webpack_exports__ = {};
   \**********************/
 const button = document.getElementById("Check")
 const input = document.getElementById('numbers')
+const userFeedback = document.getElementById('userFeedback')
 
 button.addEventListener("click", checkISBN)
 
