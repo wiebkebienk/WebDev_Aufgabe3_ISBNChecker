@@ -1,0 +1,1 @@
+{"version":3,"file":"main.js","mappings":";;;;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA,C","sources":["webpack://webdev_aufgabe3_isbnchecker/./src/index.js"],"sourcesContent":["const button = document.getElementById(\"Check\")\r\n\r\nbutton.addEventListener(\"click\", checkISBN)\r\n\r\nfunction checkISBN() {\r\n    alert(\"checkISBN\");\r\n}"],"names":[],"sourceRoot":""}
