@@ -41,3 +41,26 @@ const {caluclateISBNChecksum} = require('./script');
         })
         });
   })
+
+
+//Um die Rechnung zu testen (erste Zahl mal 1)
+    describe('caluclateISBNChecksum', () => {
+        [
+        {input: '0000000000', output: '0'},
+        {input: '1000000000', output: '1'},
+        {input: '2000000000', output: '2'},
+        {input: '3000000000', output: '3'},
+        {input: '4000000000', output: '4'},
+        {input: '5000000000', output: '5'},
+        {input: '6000000000', output: '6'},
+        {input: '7000000000', output: '7'},
+        {input: '8000000000', output: '8'},
+        {input: '9000000000', output: '9'},
+        ]
+        .forEach(({input, output}) => {
+          it('should calculate right', () => {
+            expect(caluclateISBNChecksum(input)).toBe(output)
+        })
+        })
+})
+
