@@ -1,12 +1,14 @@
-const button = document.getElementById("Check")
-const input = document.getElementById('numbers')
-const userFeedback = document.getElementById('userFeedback')
+const {caluclateISBNChecksum} = require('./script.js')
+    
+    const button = document.getElementById("Check")
+    const input = document.getElementById('numbers')
+    const userFeedback = document.getElementById('userFeedback')
 
-button.addEventListener("click", checkISBN)
-
-function checkISBN(checkSum) {
-    //alert("checkISBN");
-        if(input.value[9] === checkSum){
+    button.addEventListener("click", checkISBN)
+    
+    function checkISBN() {
+      const result= caluclateISBNChecksum(input.value)
+        if(result === input.value[9]){
             userFeedback.innerHTML = "ISBN is valid"
             userFeedback.style.color = "green"
         } else{
@@ -14,4 +16,4 @@ function checkISBN(checkSum) {
             userFeedback.style.color = "red"
         }
         
-}
+    }
