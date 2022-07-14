@@ -3,6 +3,7 @@ const {caluclateISBNChecksum} = require('./script.js')
     const button = document.getElementById("Check")
     const input = document.getElementById('numbers')
     const userFeedback = document.getElementById('userFeedback')
+    input.addEventListener("focus", resetInfoText);
 
     button.addEventListener("click", checkISBN)
     
@@ -17,3 +18,8 @@ const {caluclateISBNChecksum} = require('./script.js')
         }
         
     }
+
+    function resetInfoText(){
+        userFeedback.innerHTML = "";
+    }
+    
