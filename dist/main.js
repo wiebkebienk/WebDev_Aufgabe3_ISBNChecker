@@ -74,6 +74,7 @@ const {caluclateISBNChecksum} = __webpack_require__(/*! ./script.js */ "./src/sc
     const button = document.getElementById("Check")
     const input = document.getElementById('numbers')
     const userFeedback = document.getElementById('userFeedback')
+    input.addEventListener("focus", resetInfoText);
 
     button.addEventListener("click", checkISBN)
     
@@ -88,6 +89,11 @@ const {caluclateISBNChecksum} = __webpack_require__(/*! ./script.js */ "./src/sc
         }
         
     }
+
+    function resetInfoText(){
+        userFeedback.innerHTML = "";
+    }
+    
 })();
 
 /******/ })()
